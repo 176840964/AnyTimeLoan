@@ -13,6 +13,12 @@
 		82CF004F1FD5919500A0FF90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82CF004E1FD5919500A0FF90 /* Assets.xcassets */; };
 		82CF00521FD5919500A0FF90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CF00501FD5919500A0FF90 /* LaunchScreen.storyboard */; };
 		82CF00551FD5919600A0FF90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00541FD5919600A0FF90 /* main.m */; };
+		82CF005F1FD5954700A0FF90 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF005E1FD5954700A0FF90 /* BaseNavigationController.m */; };
+		82CF00631FD5960100A0FF90 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00621FD5960100A0FF90 /* UIImage+Color.m */; };
+		82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00681FD59AC300A0FF90 /* BaseViewController.m */; };
+		82CF006C1FD59AEF00A0FF90 /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF006B1FD59AEF00A0FF90 /* HotViewController.m */; };
+		82CF006F1FD59B0700A0FF90 /* AllLoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF006E1FD59B0700A0FF90 /* AllLoanViewController.m */; };
+		82CF00721FD59B1500A0FF90 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00711FD59B1500A0FF90 /* MineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,18 @@
 		82CF00511FD5919500A0FF90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82CF00531FD5919600A0FF90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82CF00541FD5919600A0FF90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		82CF005D1FD5954700A0FF90 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		82CF005E1FD5954700A0FF90 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		82CF00611FD5960100A0FF90 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		82CF00621FD5960100A0FF90 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		82CF00671FD59AC300A0FF90 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		82CF00681FD59AC300A0FF90 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		82CF006A1FD59AEF00A0FF90 /* HotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
+		82CF006B1FD59AEF00A0FF90 /* HotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
+		82CF006D1FD59B0700A0FF90 /* AllLoanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllLoanViewController.h; sourceTree = "<group>"; };
+		82CF006E1FD59B0700A0FF90 /* AllLoanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllLoanViewController.m; sourceTree = "<group>"; };
+		82CF00701FD59B1500A0FF90 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		82CF00711FD59B1500A0FF90 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,11 @@
 		82CF00441FD5919500A0FF90 /* AnyTimeLoan */ = {
 			isa = PBXGroup;
 			children = (
+				82CF00641FD59A5400A0FF90 /* 0.Hot */,
+				82CF00651FD59A6300A0FF90 /* 1.AllLoan */,
+				82CF00661FD59A8300A0FF90 /* 2.Mine */,
+				82CF00601FD595D700A0FF90 /* Category */,
+				82CF005B1FD5950D00A0FF90 /* Base */,
 				82CF00451FD5919500A0FF90 /* AppDelegate.h */,
 				82CF00461FD5919500A0FF90 /* AppDelegate.m */,
 				82CF00481FD5919500A0FF90 /* ViewController.h */,
@@ -69,6 +92,61 @@
 				82CF00541FD5919600A0FF90 /* main.m */,
 			);
 			path = AnyTimeLoan;
+			sourceTree = "<group>";
+		};
+		82CF005B1FD5950D00A0FF90 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				82CF005C1FD5951B00A0FF90 /* Controller */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		82CF005C1FD5951B00A0FF90 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82CF005D1FD5954700A0FF90 /* BaseNavigationController.h */,
+				82CF005E1FD5954700A0FF90 /* BaseNavigationController.m */,
+				82CF00671FD59AC300A0FF90 /* BaseViewController.h */,
+				82CF00681FD59AC300A0FF90 /* BaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82CF00601FD595D700A0FF90 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				82CF00611FD5960100A0FF90 /* UIImage+Color.h */,
+				82CF00621FD5960100A0FF90 /* UIImage+Color.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		82CF00641FD59A5400A0FF90 /* 0.Hot */ = {
+			isa = PBXGroup;
+			children = (
+				82CF006A1FD59AEF00A0FF90 /* HotViewController.h */,
+				82CF006B1FD59AEF00A0FF90 /* HotViewController.m */,
+			);
+			path = 0.Hot;
+			sourceTree = "<group>";
+		};
+		82CF00651FD59A6300A0FF90 /* 1.AllLoan */ = {
+			isa = PBXGroup;
+			children = (
+				82CF006D1FD59B0700A0FF90 /* AllLoanViewController.h */,
+				82CF006E1FD59B0700A0FF90 /* AllLoanViewController.m */,
+			);
+			path = 1.AllLoan;
+			sourceTree = "<group>";
+		};
+		82CF00661FD59A8300A0FF90 /* 2.Mine */ = {
+			isa = PBXGroup;
+			children = (
+				82CF00701FD59B1500A0FF90 /* MineViewController.h */,
+				82CF00711FD59B1500A0FF90 /* MineViewController.m */,
+			);
+			path = 2.Mine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +220,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CF005F1FD5954700A0FF90 /* BaseNavigationController.m in Sources */,
+				82CF006C1FD59AEF00A0FF90 /* HotViewController.m in Sources */,
+				82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */,
+				82CF00721FD59B1500A0FF90 /* MineViewController.m in Sources */,
 				82CF004A1FD5919500A0FF90 /* ViewController.m in Sources */,
+				82CF006F1FD59B0700A0FF90 /* AllLoanViewController.m in Sources */,
+				82CF00631FD5960100A0FF90 /* UIImage+Color.m in Sources */,
 				82CF00551FD5919600A0FF90 /* main.m in Sources */,
 				82CF00471FD5919500A0FF90 /* AppDelegate.m in Sources */,
 			);
@@ -283,7 +367,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragon.AnyTimeLoan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragon.AnyTimeLoan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
