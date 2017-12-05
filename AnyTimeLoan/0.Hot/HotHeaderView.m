@@ -10,6 +10,15 @@
 
 @implementation HotHeaderView
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (void)layoutHotHeaderViewByDic:(NSDictionary *)dic {
     self.iconView1.titleLab.text = @"小额极贷";
     self.iconView2.titleLab.text = @"大额低息";
