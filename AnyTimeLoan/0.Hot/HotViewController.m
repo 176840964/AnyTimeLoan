@@ -7,6 +7,7 @@
 //
 
 #import "HotViewController.h"
+#import "HotHeaderView.h"
 
 @interface HotViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -18,6 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    HotHeaderView *headerView = [[NSBundle mainBundle] loadNibNamed:@"HotHeaderView" owner:self options:nil].firstObject;
+    headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 292);
+    self.tableView.tableHeaderView = headerView;
+    [self.tableView registerNib:[UINib nibWithNibName:@"HotHeaderView" bundle:nil] forHeaderFooterViewReuseIdentifier:@"HotHeaderView"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +49,5 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"hotCell"];
     return cell;
 }
-
-
 
 @end

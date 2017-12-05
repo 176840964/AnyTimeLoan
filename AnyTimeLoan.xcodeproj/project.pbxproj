@@ -19,6 +19,10 @@
 		82CF006C1FD59AEF00A0FF90 /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF006B1FD59AEF00A0FF90 /* HotViewController.m */; };
 		82CF006F1FD59B0700A0FF90 /* AllLoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF006E1FD59B0700A0FF90 /* AllLoanViewController.m */; };
 		82CF00721FD59B1500A0FF90 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00711FD59B1500A0FF90 /* MineViewController.m */; };
+		D70E38BD1FD648FC002C5D9C /* HotHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70E38BC1FD648FC002C5D9C /* HotHeaderView.m */; };
+		D70E38BF1FD64910002C5D9C /* HotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E38BE1FD64910002C5D9C /* HotHeaderView.xib */; };
+		D70E38C21FD64B2E002C5D9C /* HotIconAndTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70E38C11FD64B2E002C5D9C /* HotIconAndTitleView.m */; };
+		D70E38C41FD64B4F002C5D9C /* HotIconAndTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E38C31FD64B4F002C5D9C /* HotIconAndTitleView.xib */; };
 		E3036F4A02A01D759B8AF632 /* libPods-AnyTimeLoan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A7FFBF8475F6F78CEB6805 /* libPods-AnyTimeLoan.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,12 @@
 		82CF00711FD59B1500A0FF90 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		A4726A26F1B016CFD157A84B /* Pods-AnyTimeLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyTimeLoan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnyTimeLoan/Pods-AnyTimeLoan.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A7FFBF8475F6F78CEB6805 /* libPods-AnyTimeLoan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnyTimeLoan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70E38BB1FD648FC002C5D9C /* HotHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotHeaderView.h; sourceTree = "<group>"; };
+		D70E38BC1FD648FC002C5D9C /* HotHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotHeaderView.m; sourceTree = "<group>"; };
+		D70E38BE1FD64910002C5D9C /* HotHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotHeaderView.xib; sourceTree = "<group>"; };
+		D70E38C01FD64B2E002C5D9C /* HotIconAndTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotIconAndTitleView.h; sourceTree = "<group>"; };
+		D70E38C11FD64B2E002C5D9C /* HotIconAndTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotIconAndTitleView.m; sourceTree = "<group>"; };
+		D70E38C31FD64B4F002C5D9C /* HotIconAndTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotIconAndTitleView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +161,12 @@
 			children = (
 				82CF006A1FD59AEF00A0FF90 /* HotViewController.h */,
 				82CF006B1FD59AEF00A0FF90 /* HotViewController.m */,
+				D70E38BB1FD648FC002C5D9C /* HotHeaderView.h */,
+				D70E38BC1FD648FC002C5D9C /* HotHeaderView.m */,
+				D70E38BE1FD64910002C5D9C /* HotHeaderView.xib */,
+				D70E38C01FD64B2E002C5D9C /* HotIconAndTitleView.h */,
+				D70E38C11FD64B2E002C5D9C /* HotIconAndTitleView.m */,
+				D70E38C31FD64B4F002C5D9C /* HotIconAndTitleView.xib */,
 			);
 			path = 0.Hot;
 			sourceTree = "<group>";
@@ -235,6 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82CF00521FD5919500A0FF90 /* LaunchScreen.storyboard in Resources */,
+				D70E38C41FD64B4F002C5D9C /* HotIconAndTitleView.xib in Resources */,
+				D70E38BF1FD64910002C5D9C /* HotHeaderView.xib in Resources */,
 				82CF004F1FD5919500A0FF90 /* Assets.xcassets in Resources */,
 				82CF004D1FD5919500A0FF90 /* Main.storyboard in Resources */,
 			);
@@ -300,9 +318,11 @@
 			files = (
 				82CF005F1FD5954700A0FF90 /* BaseNavigationController.m in Sources */,
 				82CF006C1FD59AEF00A0FF90 /* HotViewController.m in Sources */,
+				D70E38C21FD64B2E002C5D9C /* HotIconAndTitleView.m in Sources */,
 				82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */,
 				82CF00721FD59B1500A0FF90 /* MineViewController.m in Sources */,
 				82CF004A1FD5919500A0FF90 /* ViewController.m in Sources */,
+				D70E38BD1FD648FC002C5D9C /* HotHeaderView.m in Sources */,
 				82CF006F1FD59B0700A0FF90 /* AllLoanViewController.m in Sources */,
 				82CF00631FD5960100A0FF90 /* UIImage+Color.m in Sources */,
 				82CF00551FD5919600A0FF90 /* main.m in Sources */,

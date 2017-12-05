@@ -12,7 +12,6 @@
         <!--热门-->
         <scene sceneID="Ugc-xj-Uh8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XVa-T4-Pwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zvb-gC-dEF" customClass="HotViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="anO-nN-fIh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -124,6 +123,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="热门" id="dSP-8P-D6g"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVa-T4-Pwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612" y="-379.16041979010498"/>
         </scene>
@@ -242,6 +242,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4Xj-cH-Gu4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EbL-iy-at3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
