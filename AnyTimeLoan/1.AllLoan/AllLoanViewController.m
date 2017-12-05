@@ -8,7 +8,7 @@
 
 #import "AllLoanViewController.h"
 
-@interface AllLoanViewController ()
+@interface AllLoanViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -33,5 +33,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
 
 @end

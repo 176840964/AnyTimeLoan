@@ -15,6 +15,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         [[NSBundle mainBundle] loadNibNamed:@"HotIconAndTitleView" owner:self options:nil];
+        [self addSubview:self.view];
         self.view.frame = self.bounds;
     }
     return self;

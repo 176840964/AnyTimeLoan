@@ -20,9 +20,11 @@
     // Do any additional setup after loading the view.
     
     HotHeaderView *headerView = [[NSBundle mainBundle] loadNibNamed:@"HotHeaderView" owner:self options:nil].firstObject;
-    headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 292);
+    headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 502 + 64 + 34);
     self.tableView.tableHeaderView = headerView;
     [self.tableView registerNib:[UINib nibWithNibName:@"HotHeaderView" bundle:nil] forHeaderFooterViewReuseIdentifier:@"HotHeaderView"];
+    
+    [headerView layoutHotHeaderViewByDic:nil];
 }
 
 - (void)didReceiveMemoryWarning {
