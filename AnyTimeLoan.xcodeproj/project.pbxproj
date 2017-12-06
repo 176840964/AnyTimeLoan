@@ -23,6 +23,8 @@
 		D70E38BF1FD64910002C5D9C /* HotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E38BE1FD64910002C5D9C /* HotHeaderView.xib */; };
 		D70E38C21FD64B2E002C5D9C /* HotIconAndTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70E38C11FD64B2E002C5D9C /* HotIconAndTitleView.m */; };
 		D70E38C41FD64B4F002C5D9C /* HotIconAndTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E38C31FD64B4F002C5D9C /* HotIconAndTitleView.xib */; };
+		D755DB151FD79E9300253C0D /* AllLoanHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D755DB141FD79E9300253C0D /* AllLoanHeaderView.m */; };
+		D755DB171FD79EA300253C0D /* AllLoanHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D755DB161FD79EA300253C0D /* AllLoanHeaderView.xib */; };
 		E3036F4A02A01D759B8AF632 /* libPods-AnyTimeLoan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A7FFBF8475F6F78CEB6805 /* libPods-AnyTimeLoan.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,9 @@
 		D70E38C01FD64B2E002C5D9C /* HotIconAndTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotIconAndTitleView.h; sourceTree = "<group>"; };
 		D70E38C11FD64B2E002C5D9C /* HotIconAndTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotIconAndTitleView.m; sourceTree = "<group>"; };
 		D70E38C31FD64B4F002C5D9C /* HotIconAndTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotIconAndTitleView.xib; sourceTree = "<group>"; };
+		D755DB131FD79E9300253C0D /* AllLoanHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllLoanHeaderView.h; sourceTree = "<group>"; };
+		D755DB141FD79E9300253C0D /* AllLoanHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllLoanHeaderView.m; sourceTree = "<group>"; };
+		D755DB161FD79EA300253C0D /* AllLoanHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllLoanHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +181,9 @@
 			children = (
 				82CF006D1FD59B0700A0FF90 /* AllLoanViewController.h */,
 				82CF006E1FD59B0700A0FF90 /* AllLoanViewController.m */,
+				D755DB131FD79E9300253C0D /* AllLoanHeaderView.h */,
+				D755DB141FD79E9300253C0D /* AllLoanHeaderView.m */,
+				D755DB161FD79EA300253C0D /* AllLoanHeaderView.xib */,
 			);
 			path = 1.AllLoan;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 				82CF00521FD5919500A0FF90 /* LaunchScreen.storyboard in Resources */,
 				D70E38C41FD64B4F002C5D9C /* HotIconAndTitleView.xib in Resources */,
 				D70E38BF1FD64910002C5D9C /* HotHeaderView.xib in Resources */,
+				D755DB171FD79EA300253C0D /* AllLoanHeaderView.xib in Resources */,
 				82CF004F1FD5919500A0FF90 /* Assets.xcassets in Resources */,
 				82CF004D1FD5919500A0FF90 /* Main.storyboard in Resources */,
 			);
@@ -317,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82CF005F1FD5954700A0FF90 /* BaseNavigationController.m in Sources */,
+				D755DB151FD79E9300253C0D /* AllLoanHeaderView.m in Sources */,
 				82CF006C1FD59AEF00A0FF90 /* HotViewController.m in Sources */,
 				D70E38C21FD64B2E002C5D9C /* HotIconAndTitleView.m in Sources */,
 				82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */,
@@ -463,6 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AnyTimeLoan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragon.AnyTimeLoan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -477,6 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AnyTimeLoan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragon.AnyTimeLoan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
