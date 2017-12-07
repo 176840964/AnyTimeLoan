@@ -10,13 +10,9 @@
 
 @implementation HotHeaderView
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        
-    }
-    return self;
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.autoresizingMask = UIViewAutoresizingNone;
 }
 
 - (void)layoutHotHeaderViewByDic:(NSDictionary *)dic {

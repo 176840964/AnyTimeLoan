@@ -7,6 +7,7 @@
 //
 
 #import "AllLoanViewController.h"
+#import "AllLoanHeaderView.h"
 
 @interface AllLoanViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -17,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    AllLoanHeaderView *headerView = [[NSBundle mainBundle] loadNibNamed:@"AllLoanHeaderView" owner:self options:nil].firstObject;
+    headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 40);
+    self.tableView.tableHeaderView = headerView;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning {
