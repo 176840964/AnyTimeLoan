@@ -153,20 +153,32 @@
                         <constraint firstAttribute="height" constant="1" id="KU9-dn-5ZR"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eaQ-qt-LiY">
-                    <rect key="frame" x="15" y="53" width="345" height="604"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ID4-JE-luU">
+                    <rect key="frame" x="0.0" y="41" width="375" height="616"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eaQ-qt-LiY">
+                            <rect key="frame" x="15" y="0.0" width="345" height="616"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="jNT-mq-GFQ">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="15" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="BEE-UG-PhB"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="u1h-rC-M3A"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="jNT-mq-GFQ">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                    <connections>
-                        <outlet property="dataSource" destination="iN0-l3-epB" id="BEE-UG-PhB"/>
-                        <outlet property="delegate" destination="iN0-l3-epB" id="u1h-rC-M3A"/>
-                    </connections>
-                </collectionView>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eaQ-qt-LiY" secondAttribute="trailing" constant="15" id="2fn-nU-37D"/>
+                        <constraint firstItem="eaQ-qt-LiY" firstAttribute="top" secondItem="ID4-JE-luU" secondAttribute="top" id="p1d-pf-L2w"/>
+                        <constraint firstAttribute="bottom" secondItem="eaQ-qt-LiY" secondAttribute="bottom" id="syC-r8-Ute"/>
+                        <constraint firstItem="eaQ-qt-LiY" firstAttribute="leading" secondItem="ID4-JE-luU" secondAttribute="leading" constant="15" id="tHM-le-BpQ"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Va-lX-5fV">
                     <rect key="frame" x="0.0" y="657" width="375" height="10"/>
                     <color key="backgroundColor" red="0.95891636610031128" green="0.96303421258926392" blue="0.9658394455909729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -179,18 +191,19 @@
             <constraints>
                 <constraint firstItem="ZmE-WC-oXP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0CE-dF-DkY"/>
                 <constraint firstItem="lbW-eL-TMG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Y7-nx-ypj"/>
-                <constraint firstItem="eaQ-qt-LiY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="5Al-gs-K8n"/>
                 <constraint firstAttribute="trailing" secondItem="4Va-lX-5fV" secondAttribute="trailing" id="EJd-Em-n7I"/>
+                <constraint firstItem="ID4-JE-luU" firstAttribute="top" secondItem="ZmE-WC-oXP" secondAttribute="bottom" id="EPe-5f-8Ur"/>
                 <constraint firstItem="4Va-lX-5fV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="H9j-dv-Bef"/>
+                <constraint firstAttribute="trailing" secondItem="ID4-JE-luU" secondAttribute="trailing" id="IrS-Ry-kYn"/>
                 <constraint firstItem="lbW-eL-TMG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KhT-1o-b3T"/>
-                <constraint firstAttribute="trailing" secondItem="eaQ-qt-LiY" secondAttribute="trailing" constant="15" id="PnG-R8-Gqt"/>
-                <constraint firstItem="4Va-lX-5fV" firstAttribute="top" secondItem="eaQ-qt-LiY" secondAttribute="bottom" id="Z40-Xw-AP7"/>
+                <constraint firstItem="4Va-lX-5fV" firstAttribute="top" secondItem="ID4-JE-luU" secondAttribute="bottom" id="VqA-LE-hv0"/>
                 <constraint firstAttribute="trailing" secondItem="ZmE-WC-oXP" secondAttribute="trailing" id="i5e-vr-4ji"/>
                 <constraint firstItem="ZmE-WC-oXP" firstAttribute="top" secondItem="lbW-eL-TMG" secondAttribute="bottom" id="jp9-CQ-w45"/>
+                <constraint firstItem="ID4-JE-luU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kxA-SN-vEb"/>
                 <constraint firstAttribute="bottom" secondItem="4Va-lX-5fV" secondAttribute="bottom" id="m7q-GG-M3r"/>
                 <constraint firstAttribute="trailing" secondItem="lbW-eL-TMG" secondAttribute="trailing" id="pdz-tC-3Qc"/>
-                <constraint firstItem="eaQ-qt-LiY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="53" id="qKr-ke-3AL"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="btn1" destination="S5u-XX-ruO" id="yKm-pr-NDe"/>
                 <outlet property="btn2" destination="EqR-7F-bC7" id="7Vh-3a-4TC"/>

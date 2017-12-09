@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MineHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="303"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oOw-cI-wpB">
+                    <rect key="frame" x="151" y="40" width="62" height="62"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="DOX-gH-guv"/>
+                        <constraint firstAttribute="width" constant="62" id="ZAC-ve-W2i"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="133****1233" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUx-RO-cia">
+                    <rect key="frame" x="0.0" y="118" width="365" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ZOe-D4-2ks"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dG3-GT-cMW">
+                    <rect key="frame" x="0.0" y="293" width="365" height="10"/>
+                    <color key="backgroundColor" red="0.95891636610031128" green="0.96303421258926392" blue="0.9658394455909729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="FcZ-E2-ZFH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96885687112808228" green="0.58898168802261353" blue="0.31970703601837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oOw-cI-wpB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qhs-9d-uIC"/>
+                <constraint firstItem="gUx-RO-cia" firstAttribute="top" secondItem="oOw-cI-wpB" secondAttribute="bottom" constant="16" id="WyC-ye-eRN"/>
+                <constraint firstAttribute="bottom" secondItem="dG3-GT-cMW" secondAttribute="bottom" id="ayz-4e-nS1"/>
+                <constraint firstItem="gUx-RO-cia" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f2G-Db-qaB"/>
+                <constraint firstAttribute="trailing" secondItem="gUx-RO-cia" secondAttribute="trailing" id="mRr-zI-h69"/>
+                <constraint firstItem="dG3-GT-cMW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pbB-7O-wTT"/>
+                <constraint firstItem="oOw-cI-wpB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="th4-4D-9z4"/>
+                <constraint firstAttribute="trailing" secondItem="dG3-GT-cMW" secondAttribute="trailing" id="vG2-7e-prW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="userIconView" destination="oOw-cI-wpB" id="SEE-se-GUW"/>
+                <outlet property="userNameLab" destination="gUx-RO-cia" id="owz-WB-Jug"/>
+            </connections>
+            <point key="canvasLocation" x="-240" y="-181"/>
+        </view>
+    </objects>
+</document>

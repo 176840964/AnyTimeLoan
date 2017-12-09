@@ -62,7 +62,7 @@
         if (0 != self.curArr.count % 3) {
             row ++;
         }
-        self.changeHeaderViewHeightHandler(40 + 1 + 12 + row * (CollectionViewHeight + 5) + 10);
+        self.changeHeaderViewHeightHandler(40 + 1 + 15 + row * (CollectionViewHeight + 5) + 10);
     }
 }
 
