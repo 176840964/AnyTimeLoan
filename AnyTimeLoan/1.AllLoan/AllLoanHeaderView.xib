@@ -23,7 +23,12 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5u-XX-ruO">
                                     <rect key="frame" x="20" y="0.0" width="84.5" height="40"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="金额不限">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onTapBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="5rt-lP-WPt"/>
+                                    </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2v-TN-plh">
                                     <rect key="frame" x="99.5" y="17.5" width="5" height="5"/>
@@ -33,7 +38,7 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" red="0.96862745100000003" green="0.4549019608" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="S5u-XX-ruO" firstAttribute="top" secondItem="zVR-dx-Ojl" secondAttribute="top" id="O3D-Lh-kEt"/>
                                 <constraint firstItem="S5u-XX-ruO" firstAttribute="trailing" secondItem="L2v-TN-plh" secondAttribute="trailing" id="gFf-PK-Kdh"/>
@@ -48,7 +53,12 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqR-7F-bC7">
                                     <rect key="frame" x="20" y="0.0" width="84" height="40"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="期限不限">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onTapBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qcj-8y-fQg"/>
+                                    </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nOc-d7-ND6">
                                     <rect key="frame" x="99" y="17" width="5" height="5"/>
@@ -58,7 +68,7 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" red="0.96862745100000003" green="0.4549019608" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="EqR-7F-bC7" secondAttribute="trailing" constant="20" id="RD1-Xa-q4S"/>
                                 <constraint firstItem="EqR-7F-bC7" firstAttribute="leading" secondItem="bT7-i5-pG2" secondAttribute="leading" constant="20" id="XGh-n3-9Vj"/>
@@ -73,7 +83,12 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6F-32-8YW">
                                     <rect key="frame" x="20" y="0.0" width="84.5" height="40"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="成功率最高">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onTapBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vbt-aK-6tB"/>
+                                    </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BTo-Im-Zu0">
                                     <rect key="frame" x="99.5" y="17" width="5" height="5"/>
@@ -83,7 +98,7 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" red="0.96862745100000003" green="0.4549019608" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="N6F-32-8YW" firstAttribute="top" secondItem="gVa-Md-b1G" secondAttribute="top" id="1kQ-Po-LqC"/>
                                 <constraint firstAttribute="bottom" secondItem="N6F-32-8YW" secondAttribute="bottom" id="PUf-nJ-Aus"/>
@@ -131,13 +146,60 @@
                         <constraint firstItem="zVR-dx-Ojl" firstAttribute="top" secondItem="lbW-eL-TMG" secondAttribute="top" id="wnI-fz-26u"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZmE-WC-oXP" userLabel="lineView">
+                    <rect key="frame" x="0.0" y="40" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.96232432126998901" green="0.9664420485496521" blue="0.96924275159835815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="KU9-dn-5ZR"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eaQ-qt-LiY">
+                    <rect key="frame" x="15" y="53" width="345" height="604"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="jNT-mq-GFQ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="BEE-UG-PhB"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="u1h-rC-M3A"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Va-lX-5fV">
+                    <rect key="frame" x="0.0" y="657" width="375" height="10"/>
+                    <color key="backgroundColor" red="0.95891636610031128" green="0.96303421258926392" blue="0.9658394455909729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="UtQ-N3-oFu"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ZmE-WC-oXP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0CE-dF-DkY"/>
                 <constraint firstItem="lbW-eL-TMG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Y7-nx-ypj"/>
+                <constraint firstItem="eaQ-qt-LiY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="5Al-gs-K8n"/>
+                <constraint firstAttribute="trailing" secondItem="4Va-lX-5fV" secondAttribute="trailing" id="EJd-Em-n7I"/>
+                <constraint firstItem="4Va-lX-5fV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="H9j-dv-Bef"/>
                 <constraint firstItem="lbW-eL-TMG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KhT-1o-b3T"/>
+                <constraint firstAttribute="trailing" secondItem="eaQ-qt-LiY" secondAttribute="trailing" constant="15" id="PnG-R8-Gqt"/>
+                <constraint firstItem="4Va-lX-5fV" firstAttribute="top" secondItem="eaQ-qt-LiY" secondAttribute="bottom" id="Z40-Xw-AP7"/>
+                <constraint firstAttribute="trailing" secondItem="ZmE-WC-oXP" secondAttribute="trailing" id="i5e-vr-4ji"/>
+                <constraint firstItem="ZmE-WC-oXP" firstAttribute="top" secondItem="lbW-eL-TMG" secondAttribute="bottom" id="jp9-CQ-w45"/>
+                <constraint firstAttribute="bottom" secondItem="4Va-lX-5fV" secondAttribute="bottom" id="m7q-GG-M3r"/>
                 <constraint firstAttribute="trailing" secondItem="lbW-eL-TMG" secondAttribute="trailing" id="pdz-tC-3Qc"/>
+                <constraint firstItem="eaQ-qt-LiY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="53" id="qKr-ke-3AL"/>
             </constraints>
+            <connections>
+                <outlet property="btn1" destination="S5u-XX-ruO" id="yKm-pr-NDe"/>
+                <outlet property="btn2" destination="EqR-7F-bC7" id="7Vh-3a-4TC"/>
+                <outlet property="btn3" destination="N6F-32-8YW" id="pp4-ad-XUj"/>
+                <outlet property="collectionView" destination="eaQ-qt-LiY" id="x50-KN-DYj"/>
+                <outlet property="imgView1" destination="L2v-TN-plh" id="8KO-M5-c3h"/>
+                <outlet property="imgView2" destination="nOc-d7-ND6" id="NQ8-fQ-o4W"/>
+                <outlet property="imgView3" destination="BTo-Im-Zu0" id="0DB-kE-fSE"/>
+            </connections>
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>
     </objects>

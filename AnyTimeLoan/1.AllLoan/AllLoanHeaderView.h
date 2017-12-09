@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AllLoanHeaderView : UIView
-
+@property (copy, nonatomic) void (^changeHeaderViewHeightHandler) (CGFloat height);
 @end

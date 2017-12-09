@@ -20,7 +20,12 @@
     // Do any additional setup after loading the view.
     
     AllLoanHeaderView *headerView = [[NSBundle mainBundle] loadNibNamed:@"AllLoanHeaderView" owner:self options:nil].firstObject;
-    headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 40);
+    headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 40 + 1 + 10);
+    __weak typeof(headerView) weakHeaderView = headerView;
+    headerView.changeHeaderViewHeightHandler = ^(CGFloat height) {
+        weakHeaderView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), height);
+        [self.tableView reloadData];
+    };
     self.tableView.tableHeaderView = headerView;
 }
 

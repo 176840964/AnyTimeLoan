@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820ADB6D1FDB98FC0076A965 /* AllLoanCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 820ADB6B1FDB98FC0076A965 /* AllLoanCollectionViewCell.m */; };
+		820ADB6E1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820ADB6C1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib */; };
 		82CF00471FD5919500A0FF90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00461FD5919500A0FF90 /* AppDelegate.m */; };
 		82CF004A1FD5919500A0FF90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00491FD5919500A0FF90 /* ViewController.m */; };
 		82CF004D1FD5919500A0FF90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CF004B1FD5919500A0FF90 /* Main.storyboard */; };
@@ -30,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		65D17EC557F7784C53E395C0 /* Pods-AnyTimeLoan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyTimeLoan.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnyTimeLoan/Pods-AnyTimeLoan.release.xcconfig"; sourceTree = "<group>"; };
+		820ADB6A1FDB98FC0076A965 /* AllLoanCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllLoanCollectionViewCell.h; sourceTree = "<group>"; };
+		820ADB6B1FDB98FC0076A965 /* AllLoanCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllLoanCollectionViewCell.m; sourceTree = "<group>"; };
+		820ADB6C1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllLoanCollectionViewCell.xib; sourceTree = "<group>"; };
 		82CF00421FD5919500A0FF90 /* AnyTimeLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyTimeLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CF00451FD5919500A0FF90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82CF00461FD5919500A0FF90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -184,6 +189,9 @@
 				D755DB131FD79E9300253C0D /* AllLoanHeaderView.h */,
 				D755DB141FD79E9300253C0D /* AllLoanHeaderView.m */,
 				D755DB161FD79EA300253C0D /* AllLoanHeaderView.xib */,
+				820ADB6A1FDB98FC0076A965 /* AllLoanCollectionViewCell.h */,
+				820ADB6B1FDB98FC0076A965 /* AllLoanCollectionViewCell.m */,
+				820ADB6C1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib */,
 			);
 			path = 1.AllLoan;
 			sourceTree = "<group>";
@@ -260,6 +268,7 @@
 			files = (
 				82CF00521FD5919500A0FF90 /* LaunchScreen.storyboard in Resources */,
 				D70E38C41FD64B4F002C5D9C /* HotIconAndTitleView.xib in Resources */,
+				820ADB6E1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib in Resources */,
 				D70E38BF1FD64910002C5D9C /* HotHeaderView.xib in Resources */,
 				D755DB171FD79EA300253C0D /* AllLoanHeaderView.xib in Resources */,
 				82CF004F1FD5919500A0FF90 /* Assets.xcassets in Resources */,
@@ -336,6 +345,7 @@
 				82CF006F1FD59B0700A0FF90 /* AllLoanViewController.m in Sources */,
 				82CF00631FD5960100A0FF90 /* UIImage+Color.m in Sources */,
 				82CF00551FD5919600A0FF90 /* main.m in Sources */,
+				820ADB6D1FDB98FC0076A965 /* AllLoanCollectionViewCell.m in Sources */,
 				82CF00471FD5919500A0FF90 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24HXEKYFKY;
 				INFOPLIST_FILE = AnyTimeLoan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -487,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24HXEKYFKY;
 				INFOPLIST_FILE = AnyTimeLoan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
