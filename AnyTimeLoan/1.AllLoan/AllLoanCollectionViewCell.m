@@ -20,7 +20,7 @@
 - (void)setIsSelected:(BOOL)isSelected {
     _isSelected = isSelected;
     if (isSelected) {
-        self.titleLab.textColor = [UIColor colorWithRed:243 / 255.0 green:129 / 255.0 blue:50 / 255.0 alpha:1.0];
+        self.titleLab.textColor = CommonColor;
         self.titleLab.layer.borderWidth = 1.0;
     } else {
         self.titleLab.textColor = [UIColor lightGrayColor];
