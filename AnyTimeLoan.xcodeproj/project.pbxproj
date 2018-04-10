@@ -23,6 +23,13 @@
 		82CF006C1FD59AEF00A0FF90 /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF006B1FD59AEF00A0FF90 /* HotViewController.m */; };
 		82CF006F1FD59B0700A0FF90 /* AllLoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF006E1FD59B0700A0FF90 /* AllLoanViewController.m */; };
 		82CF00721FD59B1500A0FF90 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00711FD59B1500A0FF90 /* MineViewController.m */; };
+		82F0D93A207D01B3002B85AE /* AdultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0D939207D01B3002B85AE /* AdultViewController.m */; };
+		82F0D93D207D0225002B85AE /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0D93C207D0225002B85AE /* HomePageViewController.m */; };
+		82F0D940207D026D002B85AE /* JuvenileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0D93F207D026D002B85AE /* JuvenileViewController.m */; };
+		82F0D948207D071B002B85AE /* CommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0D947207D071B002B85AE /* CommonHeaderView.m */; };
+		82F0D94A207D0737002B85AE /* CommonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F0D949207D0737002B85AE /* CommonHeaderView.xib */; };
+		82F0D94E207D0A84002B85AE /* CommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0D94C207D0A84002B85AE /* CommonTableViewCell.m */; };
+		82F0D94F207D0A84002B85AE /* CommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F0D94D207D0A84002B85AE /* CommonTableViewCell.xib */; };
 		D70E38BD1FD648FC002C5D9C /* HotHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70E38BC1FD648FC002C5D9C /* HotHeaderView.m */; };
 		D70E38BF1FD64910002C5D9C /* HotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70E38BE1FD64910002C5D9C /* HotHeaderView.xib */; };
 		D70E38C21FD64B2E002C5D9C /* HotIconAndTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70E38C11FD64B2E002C5D9C /* HotIconAndTitleView.m */; };
@@ -63,6 +70,18 @@
 		82CF006E1FD59B0700A0FF90 /* AllLoanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllLoanViewController.m; sourceTree = "<group>"; };
 		82CF00701FD59B1500A0FF90 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		82CF00711FD59B1500A0FF90 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		82F0D938207D01B3002B85AE /* AdultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdultViewController.h; sourceTree = "<group>"; };
+		82F0D939207D01B3002B85AE /* AdultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdultViewController.m; sourceTree = "<group>"; };
+		82F0D93B207D0225002B85AE /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		82F0D93C207D0225002B85AE /* HomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		82F0D93E207D026D002B85AE /* JuvenileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JuvenileViewController.h; sourceTree = "<group>"; };
+		82F0D93F207D026D002B85AE /* JuvenileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JuvenileViewController.m; sourceTree = "<group>"; };
+		82F0D946207D071B002B85AE /* CommonHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonHeaderView.h; sourceTree = "<group>"; };
+		82F0D947207D071B002B85AE /* CommonHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonHeaderView.m; sourceTree = "<group>"; };
+		82F0D949207D0737002B85AE /* CommonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonHeaderView.xib; sourceTree = "<group>"; };
+		82F0D94B207D0A84002B85AE /* CommonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTableViewCell.h; sourceTree = "<group>"; };
+		82F0D94C207D0A84002B85AE /* CommonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonTableViewCell.m; sourceTree = "<group>"; };
+		82F0D94D207D0A84002B85AE /* CommonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonTableViewCell.xib; sourceTree = "<group>"; };
 		A4726A26F1B016CFD157A84B /* Pods-AnyTimeLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyTimeLoan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnyTimeLoan/Pods-AnyTimeLoan.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A7FFBF8475F6F78CEB6805 /* libPods-AnyTimeLoan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnyTimeLoan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70E38BB1FD648FC002C5D9C /* HotHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotHeaderView.h; sourceTree = "<group>"; };
@@ -126,11 +145,13 @@
 		82CF00441FD5919500A0FF90 /* AnyTimeLoan */ = {
 			isa = PBXGroup;
 			children = (
-				82CF00641FD59A5400A0FF90 /* 0.Hot */,
-				82CF00651FD59A6300A0FF90 /* 1.AllLoan */,
-				82CF00661FD59A8300A0FF90 /* 2.Mine */,
+				82CF00641FD59A5400A0FF90 /* 0.HomePage */,
+				82CF00651FD59A6300A0FF90 /* 1.Juvenile */,
+				82F0D937207CFFBB002B85AE /* 2.Adult */,
+				82CF00661FD59A8300A0FF90 /* 3.Mine */,
 				82CF00601FD595D700A0FF90 /* Category */,
 				82CF005B1FD5950D00A0FF90 /* Base */,
+				82F0D941207D069C002B85AE /* Common */,
 				82CF00451FD5919500A0FF90 /* AppDelegate.h */,
 				82CF00461FD5919500A0FF90 /* AppDelegate.m */,
 				82CF00481FD5919500A0FF90 /* ViewController.h */,
@@ -173,7 +194,7 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		82CF00641FD59A5400A0FF90 /* 0.Hot */ = {
+		82CF00641FD59A5400A0FF90 /* 0.HomePage */ = {
 			isa = PBXGroup;
 			children = (
 				82CF006A1FD59AEF00A0FF90 /* HotViewController.h */,
@@ -184,11 +205,13 @@
 				D70E38C01FD64B2E002C5D9C /* HotIconAndTitleView.h */,
 				D70E38C11FD64B2E002C5D9C /* HotIconAndTitleView.m */,
 				D70E38C31FD64B4F002C5D9C /* HotIconAndTitleView.xib */,
+				82F0D93B207D0225002B85AE /* HomePageViewController.h */,
+				82F0D93C207D0225002B85AE /* HomePageViewController.m */,
 			);
-			path = 0.Hot;
+			path = 0.HomePage;
 			sourceTree = "<group>";
 		};
-		82CF00651FD59A6300A0FF90 /* 1.AllLoan */ = {
+		82CF00651FD59A6300A0FF90 /* 1.Juvenile */ = {
 			isa = PBXGroup;
 			children = (
 				82CF006D1FD59B0700A0FF90 /* AllLoanViewController.h */,
@@ -199,11 +222,13 @@
 				820ADB6A1FDB98FC0076A965 /* AllLoanCollectionViewCell.h */,
 				820ADB6B1FDB98FC0076A965 /* AllLoanCollectionViewCell.m */,
 				820ADB6C1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib */,
+				82F0D93E207D026D002B85AE /* JuvenileViewController.h */,
+				82F0D93F207D026D002B85AE /* JuvenileViewController.m */,
 			);
-			path = 1.AllLoan;
+			path = 1.Juvenile;
 			sourceTree = "<group>";
 		};
-		82CF00661FD59A8300A0FF90 /* 2.Mine */ = {
+		82CF00661FD59A8300A0FF90 /* 3.Mine */ = {
 			isa = PBXGroup;
 			children = (
 				82CF00701FD59B1500A0FF90 /* MineViewController.h */,
@@ -212,7 +237,37 @@
 				826D3F3D1FDBB6C400DBE37C /* MineHeaderView.m */,
 				826D3F3F1FDBB6D200DBE37C /* MineHeaderView.xib */,
 			);
-			path = 2.Mine;
+			path = 3.Mine;
+			sourceTree = "<group>";
+		};
+		82F0D937207CFFBB002B85AE /* 2.Adult */ = {
+			isa = PBXGroup;
+			children = (
+				82F0D938207D01B3002B85AE /* AdultViewController.h */,
+				82F0D939207D01B3002B85AE /* AdultViewController.m */,
+			);
+			path = 2.Adult;
+			sourceTree = "<group>";
+		};
+		82F0D941207D069C002B85AE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				82F0D942207D06B7002B85AE /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		82F0D942207D06B7002B85AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82F0D946207D071B002B85AE /* CommonHeaderView.h */,
+				82F0D947207D071B002B85AE /* CommonHeaderView.m */,
+				82F0D949207D0737002B85AE /* CommonHeaderView.xib */,
+				82F0D94B207D0A84002B85AE /* CommonTableViewCell.h */,
+				82F0D94C207D0A84002B85AE /* CommonTableViewCell.m */,
+				82F0D94D207D0A84002B85AE /* CommonTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,12 +331,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F0D94F207D0A84002B85AE /* CommonTableViewCell.xib in Resources */,
 				826D3F401FDBB6D200DBE37C /* MineHeaderView.xib in Resources */,
 				82CF00521FD5919500A0FF90 /* LaunchScreen.storyboard in Resources */,
 				D70E38C41FD64B4F002C5D9C /* HotIconAndTitleView.xib in Resources */,
 				820ADB6E1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib in Resources */,
 				D70E38BF1FD64910002C5D9C /* HotHeaderView.xib in Resources */,
 				D755DB171FD79EA300253C0D /* AllLoanHeaderView.xib in Resources */,
+				82F0D94A207D0737002B85AE /* CommonHeaderView.xib in Resources */,
 				82CF004F1FD5919500A0FF90 /* Assets.xcassets in Resources */,
 				82CF004D1FD5919500A0FF90 /* Main.storyboard in Resources */,
 			);
@@ -349,12 +406,17 @@
 				D755DB151FD79E9300253C0D /* AllLoanHeaderView.m in Sources */,
 				82CF006C1FD59AEF00A0FF90 /* HotViewController.m in Sources */,
 				D70E38C21FD64B2E002C5D9C /* HotIconAndTitleView.m in Sources */,
+				82F0D93A207D01B3002B85AE /* AdultViewController.m in Sources */,
 				82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */,
+				82F0D94E207D0A84002B85AE /* CommonTableViewCell.m in Sources */,
+				82F0D948207D071B002B85AE /* CommonHeaderView.m in Sources */,
 				82CF00721FD59B1500A0FF90 /* MineViewController.m in Sources */,
 				82CF004A1FD5919500A0FF90 /* ViewController.m in Sources */,
+				82F0D93D207D0225002B85AE /* HomePageViewController.m in Sources */,
 				D70E38BD1FD648FC002C5D9C /* HotHeaderView.m in Sources */,
 				826D3F3E1FDBB6C400DBE37C /* MineHeaderView.m in Sources */,
 				82CF006F1FD59B0700A0FF90 /* AllLoanViewController.m in Sources */,
+				82F0D940207D026D002B85AE /* JuvenileViewController.m in Sources */,
 				82CF00631FD5960100A0FF90 /* UIImage+Color.m in Sources */,
 				82CF00551FD5919600A0FF90 /* main.m in Sources */,
 				820ADB6D1FDB98FC0076A965 /* AllLoanCollectionViewCell.m in Sources */,
