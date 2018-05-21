@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		820ADB6D1FDB98FC0076A965 /* AllLoanCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 820ADB6B1FDB98FC0076A965 /* AllLoanCollectionViewCell.m */; };
 		820ADB6E1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820ADB6C1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib */; };
+		822BB6A320B310AF00825CB3 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 822BB6A220B310AF00825CB3 /* HomeCollectionViewCell.m */; };
+		822BB6A720B3194200825CB3 /* HomeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 822BB6A520B3194200825CB3 /* HomeCollectionReusableView.m */; };
+		822BB6A820B3194200825CB3 /* HomeCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822BB6A620B3194200825CB3 /* HomeCollectionReusableView.xib */; };
 		826D3F3E1FDBB6C400DBE37C /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 826D3F3D1FDBB6C400DBE37C /* MineHeaderView.m */; };
 		826D3F401FDBB6D200DBE37C /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826D3F3F1FDBB6D200DBE37C /* MineHeaderView.xib */; };
+		82B32CC120B306530060EF0D /* MineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B32CC020B306530060EF0D /* MineInfoViewController.m */; };
+		82B32CC420B306680060EF0D /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B32CC320B306680060EF0D /* ContactUsViewController.m */; };
 		82CF00471FD5919500A0FF90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00461FD5919500A0FF90 /* AppDelegate.m */; };
 		82CF004A1FD5919500A0FF90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00491FD5919500A0FF90 /* ViewController.m */; };
 		82CF004D1FD5919500A0FF90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CF004B1FD5919500A0FF90 /* Main.storyboard */; };
@@ -44,10 +49,19 @@
 		820ADB6A1FDB98FC0076A965 /* AllLoanCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllLoanCollectionViewCell.h; sourceTree = "<group>"; };
 		820ADB6B1FDB98FC0076A965 /* AllLoanCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllLoanCollectionViewCell.m; sourceTree = "<group>"; };
 		820ADB6C1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllLoanCollectionViewCell.xib; sourceTree = "<group>"; };
+		822BB6A120B310AF00825CB3 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		822BB6A220B310AF00825CB3 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		822BB6A420B3194200825CB3 /* HomeCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionReusableView.h; sourceTree = "<group>"; };
+		822BB6A520B3194200825CB3 /* HomeCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionReusableView.m; sourceTree = "<group>"; };
+		822BB6A620B3194200825CB3 /* HomeCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionReusableView.xib; sourceTree = "<group>"; };
 		826D3F3B1FDBB48300DBE37C /* AnyTimeLoan.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyTimeLoan.pch; sourceTree = "<group>"; };
 		826D3F3C1FDBB6C400DBE37C /* MineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
 		826D3F3D1FDBB6C400DBE37C /* MineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
 		826D3F3F1FDBB6D200DBE37C /* MineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
+		82B32CBF20B306530060EF0D /* MineInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInfoViewController.h; sourceTree = "<group>"; };
+		82B32CC020B306530060EF0D /* MineInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInfoViewController.m; sourceTree = "<group>"; };
+		82B32CC220B306680060EF0D /* ContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		82B32CC320B306680060EF0D /* ContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		82CF00421FD5919500A0FF90 /* AnyTimeLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyTimeLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CF00451FD5919500A0FF90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82CF00461FD5919500A0FF90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +136,24 @@
 				65D17EC557F7784C53E395C0 /* Pods-AnyTimeLoan.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		82B32CBD20B305DF0060EF0D /* 3.1MineInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82B32CBF20B306530060EF0D /* MineInfoViewController.h */,
+				82B32CC020B306530060EF0D /* MineInfoViewController.m */,
+			);
+			path = 3.1MineInfoViewController;
+			sourceTree = "<group>";
+		};
+		82B32CBE20B305FF0060EF0D /* 3.2ContactUsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82B32CC220B306680060EF0D /* ContactUsViewController.h */,
+				82B32CC320B306680060EF0D /* ContactUsViewController.m */,
+			);
+			path = 3.2ContactUsViewController;
 			sourceTree = "<group>";
 		};
 		82CF00391FD5919500A0FF90 = {
@@ -207,6 +239,11 @@
 				D70E38C31FD64B4F002C5D9C /* HotIconAndTitleView.xib */,
 				82F0D93B207D0225002B85AE /* HomePageViewController.h */,
 				82F0D93C207D0225002B85AE /* HomePageViewController.m */,
+				822BB6A120B310AF00825CB3 /* HomeCollectionViewCell.h */,
+				822BB6A220B310AF00825CB3 /* HomeCollectionViewCell.m */,
+				822BB6A420B3194200825CB3 /* HomeCollectionReusableView.h */,
+				822BB6A520B3194200825CB3 /* HomeCollectionReusableView.m */,
+				822BB6A620B3194200825CB3 /* HomeCollectionReusableView.xib */,
 			);
 			path = 0.HomePage;
 			sourceTree = "<group>";
@@ -231,6 +268,8 @@
 		82CF00661FD59A8300A0FF90 /* 3.Mine */ = {
 			isa = PBXGroup;
 			children = (
+				82B32CBD20B305DF0060EF0D /* 3.1MineInfoViewController */,
+				82B32CBE20B305FF0060EF0D /* 3.2ContactUsViewController */,
 				82CF00701FD59B1500A0FF90 /* MineViewController.h */,
 				82CF00711FD59B1500A0FF90 /* MineViewController.m */,
 				826D3F3C1FDBB6C400DBE37C /* MineHeaderView.h */,
@@ -335,6 +374,7 @@
 				826D3F401FDBB6D200DBE37C /* MineHeaderView.xib in Resources */,
 				82CF00521FD5919500A0FF90 /* LaunchScreen.storyboard in Resources */,
 				D70E38C41FD64B4F002C5D9C /* HotIconAndTitleView.xib in Resources */,
+				822BB6A820B3194200825CB3 /* HomeCollectionReusableView.xib in Resources */,
 				820ADB6E1FDB98FC0076A965 /* AllLoanCollectionViewCell.xib in Resources */,
 				D70E38BF1FD64910002C5D9C /* HotHeaderView.xib in Resources */,
 				D755DB171FD79EA300253C0D /* AllLoanHeaderView.xib in Resources */,
@@ -402,9 +442,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B32CC420B306680060EF0D /* ContactUsViewController.m in Sources */,
 				82CF005F1FD5954700A0FF90 /* BaseNavigationController.m in Sources */,
 				D755DB151FD79E9300253C0D /* AllLoanHeaderView.m in Sources */,
+				822BB6A320B310AF00825CB3 /* HomeCollectionViewCell.m in Sources */,
 				82CF006C1FD59AEF00A0FF90 /* HotViewController.m in Sources */,
+				82B32CC120B306530060EF0D /* MineInfoViewController.m in Sources */,
 				D70E38C21FD64B2E002C5D9C /* HotIconAndTitleView.m in Sources */,
 				82F0D93A207D01B3002B85AE /* AdultViewController.m in Sources */,
 				82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */,
@@ -418,6 +461,7 @@
 				82CF006F1FD59B0700A0FF90 /* AllLoanViewController.m in Sources */,
 				82F0D940207D026D002B85AE /* JuvenileViewController.m in Sources */,
 				82CF00631FD5960100A0FF90 /* UIImage+Color.m in Sources */,
+				822BB6A720B3194200825CB3 /* HomeCollectionReusableView.m in Sources */,
 				82CF00551FD5919600A0FF90 /* main.m in Sources */,
 				820ADB6D1FDB98FC0076A965 /* AllLoanCollectionViewCell.m in Sources */,
 				82CF00471FD5919500A0FF90 /* AppDelegate.m in Sources */,

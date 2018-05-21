@@ -1,24 +1,24 @@
 //
-//  MineViewController.m
+//  MineInfoViewController.m
 //  AnyTimeLoan
 //
-//  Created by 张晓龙 on 2017/12/4.
-//  Copyright © 2017年 张晓龙. All rights reserved.
+//  Created by 张晓龙 on 2018/5/21.
+//  Copyright © 2018年 张晓龙. All rights reserved.
 //
 
-#import "MineViewController.h"
-#import "MineHeaderView.h"
+#import "MineInfoViewController.h"
 
-@interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface MineInfoViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSArray *dataArr;
 @end
 
-@implementation MineViewController
+@implementation MineInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.dataArr = @[@"个人资料", @"关于我们"];
+    self.title = @"个人资料";
+    self.dataArr = @[@"头像", @"昵称", @"登录手机号"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,10 +26,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+/*
 #pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -37,7 +42,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MineCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MineInfoCell"];
     
     NSString *titleStr = [self.dataArr objectAtIndex:indexPath.row];
     cell.textLabel.text = titleStr;
@@ -45,13 +50,5 @@
 }
 
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (0 == indexPath.row) {
-        [self performSegueWithIdentifier:@"showMineInfoViewController" sender:self];
-    } else {
-        [self performSegueWithIdentifier:@"showContactUsViewController" sender:self];
-    }
-}
 
 @end
