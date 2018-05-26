@@ -343,7 +343,7 @@
 				TargetAttributes = {
 					82CF00411FD5919500A0FF90 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -599,14 +599,17 @@
 			baseConfigurationReference = A4726A26F1B016CFD157A84B /* Pods-AnyTimeLoan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 24HXEKYFKY;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AnyTimeLoan/AnyTimeLoan.pch";
 				INFOPLIST_FILE = AnyTimeLoan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dragon.AnyTimeLoan;
+				PRODUCT_BUNDLE_IDENTIFIER = test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2bbe5d09-ed5f-4037-852c-e2f1eba79b42";
+				PROVISIONING_PROFILE_SPECIFIER = test;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -616,14 +619,17 @@
 			baseConfigurationReference = 65D17EC557F7784C53E395C0 /* Pods-AnyTimeLoan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 24HXEKYFKY;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AnyTimeLoan/AnyTimeLoan.pch";
 				INFOPLIST_FILE = AnyTimeLoan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dragon.AnyTimeLoan;
+				PRODUCT_BUNDLE_IDENTIFIER = test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2bbe5d09-ed5f-4037-852c-e2f1eba79b42";
+				PROVISIONING_PROFILE_SPECIFIER = test;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
