@@ -13,6 +13,8 @@
 @interface HomePageViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) CommonHeaderView *headerView;
+@property (strong, nonatomic) NSMutableArray *dataArr;
+@property (assign, nonatomic) NSInteger selectedIndex;
 @end
 
 @implementation HomePageViewController
@@ -26,6 +28,9 @@
     self.headerView = [[NSBundle mainBundle] loadNibNamed:@"CommonHeaderView" owner:self options:nil].firstObject;
     self.headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 168);
     self.headerView.backgroundColor = [UIColor redColor];
+    
+    self.dataArr = [NSMutableArray new];
+    [self requestNetwork];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,24 +38,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - network
+- (void)requestNetwork {
+    [[AFHTTPSessionManager manager] POST:CommonUrl parameters:@{@"category_id":@"1", @"page":@(1)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dataDic = responseObject;
+        NSNumber *code = [dataDic objectForKey:@"code"];
+        NSString *msg = [dataDic objectForKey:@"msg"];
+        if (code.integerValue == 1) {
+            NSArray *list = [[dataDic objectForKey:@"data"] objectForKey:@"list"];
+            for (NSDictionary *dic in list) {
+                CommonModel * model = [CommonModel createCommonModelByDic:dic];
+                [self.dataArr addObject:model];
+            }
+            [self.collectionView reloadData];
+        } else {
+            NSLog(@"%@", msg);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
-*/
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showCommonWebViewController"]) {
+        CommonModel *model = [self.dataArr objectAtIndex:self.selectedIndex];
+        CommonWebViewController *vc = segue.destinationViewController;
+        vc.title = model.post_title;
+        vc.urlStr = model.post_source;
+    }
+}
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 16;
+    return self.dataArr.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CommonModel *model = [self.dataArr objectAtIndex:indexPath.row];
     HomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionViewCell" forIndexPath:indexPath];
-    cell.lable.text = @"test";
+    cell.lable.text = model.post_title;
+    [cell.imgView setImageWithURL:[NSURL URLWithString:model.thumbnail]];
     return cell;
 }
 
@@ -61,6 +89,10 @@
 }
 
 #pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:@"showCommonWebViewController" sender:self];
+}
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

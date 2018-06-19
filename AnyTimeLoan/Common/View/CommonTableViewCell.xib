@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -96,12 +96,11 @@
                             <constraint firstAttribute="width" constant="1" id="i64-gX-xFy"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xil-Ws-AOa">
-                        <rect key="frame" x="282" y="65" width="30" height="20"/>
-                        <color key="backgroundColor" red="0.96885687109999996" green="0.58898168799999995" blue="0.319707036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tt" translatesAutoresizingMaskIntoConstraints="NO" id="xil-Ws-AOa">
+                        <rect key="frame" x="302" y="66" width="10" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="CnF-CP-S59"/>
-                            <constraint firstAttribute="height" constant="20" id="DrB-sk-MJH"/>
+                            <constraint firstAttribute="width" constant="10" id="CnF-CP-S59"/>
+                            <constraint firstAttribute="height" constant="18" id="DrB-sk-MJH"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -133,7 +132,17 @@
                     <constraint firstItem="JFt-lZ-Dyd" firstAttribute="leading" secondItem="3iF-qh-rNL" secondAttribute="leading" id="y5Y-gy-Qnh"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="activityLab" destination="a6j-LP-myw" id="Cw5-Lv-Vks"/>
+                <outlet property="ageRangeLab" destination="JFt-lZ-Dyd" id="jbM-fd-IWn"/>
+                <outlet property="iconView" destination="sDK-8V-pO2" id="0mq-8n-ycs"/>
+                <outlet property="subTitleLab" destination="9g2-Qi-vO2" id="hLf-HK-U4D"/>
+                <outlet property="titleLab" destination="1BJ-ft-rlu" id="9UF-Hp-kjh"/>
+            </connections>
             <point key="canvasLocation" x="160" y="-44"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="tt" width="9" height="17"/>
+    </resources>
 </document>

@@ -10,6 +10,8 @@
 
 @interface AdultViewController ()
 @property (strong, nonatomic) CommonHeaderView *headerView;
+@property (strong, nonatomic) NSMutableArray *dataArr;
+@property (assign, nonatomic) NSInteger selectedIndex;
 @end
 
 @implementation AdultViewController
@@ -25,6 +27,9 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CommonTableViewCell" bundle:nil] forCellReuseIdentifier:@"CommonTableViewCell"];
     self.tableView.rowHeight = 150;
+    
+    self.dataArr = [NSMutableArray new];
+    [self requestNetwork];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +37,57 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)requestNetwork {
+    [[AFHTTPSessionManager manager] POST:CommonUrl parameters:@{@"category_id":@"3", @"page":@(1)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dataDic = responseObject;
+        NSNumber *code = [dataDic objectForKey:@"code"];
+        NSString *msg = [dataDic objectForKey:@"msg"];
+        if (code.integerValue == 1) {
+            NSArray *list = [[dataDic objectForKey:@"data"] objectForKey:@"list"];
+            for (NSDictionary *dic in list) {
+                CommonModel * model = [CommonModel createCommonModelByDic:dic];
+                [self.dataArr addObject:model];
+            }
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", msg);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
-*/
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showCommonWebViewController"]) {
+        CommonModel *model = [self.dataArr objectAtIndex:self.selectedIndex];
+        CommonWebViewController *vc = segue.destinationViewController;
+        vc.title = model.post_title;
+        vc.urlStr = model.post_source;
+    }
+}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommonTableViewCell"];
+    CommonModel *model = [self.dataArr objectAtIndex:indexPath.row];
+    CommonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommonTableViewCell"];
+    [cell.iconView setImageWithURL:[NSURL URLWithString:model.thumbnail]];
+    cell.titleLab.text = model.post_title;
+    cell.subTitleLab.text = model.post_keywords;
+    cell.ageRangeLab.text = model.add_apply_age;
+    cell.activityLab.text = model.post_excerpt;
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:@"showCommonWebViewController" sender:self];
+}
 
 @end

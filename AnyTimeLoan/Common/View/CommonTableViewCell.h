@@ -10,4 +10,10 @@
 
 @interface CommonTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
+@property (weak, nonatomic) IBOutlet UILabel *subTitleLab;
+@property (weak, nonatomic) IBOutlet UILabel *ageRangeLab;
+@property (weak, nonatomic) IBOutlet UILabel *activityLab;
+
 @end
