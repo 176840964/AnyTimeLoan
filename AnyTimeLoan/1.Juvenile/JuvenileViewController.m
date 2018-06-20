@@ -20,10 +20,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 168)];
     self.headerView = [[NSBundle mainBundle] loadNibNamed:@"CommonHeaderView" owner:self options:nil].firstObject;
     self.headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 168);
     self.headerView.backgroundColor = [UIColor redColor];
-    self.tableView.tableHeaderView = self.headerView;
+    [view addSubview:self.headerView];
+    self.tableView.tableHeaderView = view;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CommonTableViewCell" bundle:nil] forCellReuseIdentifier:@"CommonTableViewCell"];
     self.tableView.rowHeight = 150;
