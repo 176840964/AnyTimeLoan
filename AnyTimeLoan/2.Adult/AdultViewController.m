@@ -80,7 +80,12 @@
     [cell.iconView setImageWithURL:[NSURL URLWithString:model.thumbnail]];
     cell.titleLab.text = model.post_title;
     cell.subTitleLab.text = model.post_keywords;
-    cell.ageRangeLab.text = model.add_apply_age;
+    
+    NSMutableAttributedString* attrStr = [[NSMutableAttributedString alloc] initWithString:model.add_apply_age];
+    [attrStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:21] range:NSMakeRange(0, model.add_apply_age.length - 2)];
+    [attrStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:11] range:NSMakeRange(model.add_apply_age.length - 2, 2)];
+    cell.ageRangeLab.attributedText = attrStr;
+    
     cell.activityLab.text = model.post_excerpt;
     return cell;
 }
