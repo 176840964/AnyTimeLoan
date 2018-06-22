@@ -46,7 +46,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFN-Jm-WbV">
-                                                    <rect key="frame" x="0.0" y="76" width="100" height="21"/>
+                                                    <rect key="frame" x="0.0" y="77" width="100" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="A0V-Ym-ulf"/>
                                                     </constraints>
@@ -218,7 +218,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1l8-Bi-IRB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -264,8 +264,8 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1l8-Bi-IRB" secondAttribute="trailing" id="0tb-fm-Gs7"/>
                             <constraint firstItem="1l8-Bi-IRB" firstAttribute="leading" secondItem="hDT-lS-GOd" secondAttribute="leading" id="0xd-dg-hgn"/>
-                            <constraint firstAttribute="bottom" secondItem="1l8-Bi-IRB" secondAttribute="bottom" id="HdR-Hx-cqP"/>
-                            <constraint firstItem="1l8-Bi-IRB" firstAttribute="top" secondItem="hDT-lS-GOd" secondAttribute="top" id="RxS-u9-SP5"/>
+                            <constraint firstItem="Wks-87-nPB" firstAttribute="top" secondItem="1l8-Bi-IRB" secondAttribute="bottom" id="R9q-So-qhq"/>
+                            <constraint firstItem="1l8-Bi-IRB" firstAttribute="top" secondItem="TAH-51-MqQ" secondAttribute="bottom" id="V3U-3J-IO9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的" id="H2z-ek-Al4"/>
@@ -277,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DA5-bu-FZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="1734"/>
+            <point key="canvasLocation" x="1604" y="1733.8830584707648"/>
         </scene>
         <!--Mine Info View Controller-->
         <scene sceneID="I7y-eu-w4G">
