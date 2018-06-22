@@ -96,7 +96,7 @@
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 3) / 4.0, 140);
+    return CGSizeMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 3) / 4.0, 110);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {

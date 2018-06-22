@@ -44,6 +44,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactUsCell"];
     NSArray *arr = [self.dataArr objectAtIndex:indexPath.row];
     cell.textLabel.text = [arr objectAtIndex:0];
+    cell.textLabel.textColor = [UIColor colorWithRed:125 / 255.0 green:128 / 255.0 blue:129 / 255.0 alpha:1.0];
     cell.detailTextLabel.text = [arr objectAtIndex:1];
     return cell;
 }

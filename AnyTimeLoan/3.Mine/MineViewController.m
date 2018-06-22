@@ -41,6 +41,7 @@
     
     NSString *titleStr = [self.dataArr objectAtIndex:indexPath.row];
     cell.textLabel.text = titleStr;
+    cell.textLabel.textColor = [UIColor colorWithRed:125 / 255.0 green:128 / 255.0 blue:129 / 255.0 alpha:1.0];
     return cell;
 }
 
