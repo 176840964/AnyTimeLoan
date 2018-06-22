@@ -27,7 +27,6 @@
     
     self.headerView = [[NSBundle mainBundle] loadNibNamed:@"CommonHeaderView" owner:self options:nil].firstObject;
     self.headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 168);
-    self.headerView.backgroundColor = [UIColor redColor];
     
     self.dataArr = [NSMutableArray new];
     [self requestNetwork];

@@ -23,7 +23,6 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 168)];
     self.headerView = [[NSBundle mainBundle] loadNibNamed:@"CommonHeaderView" owner:self options:nil].firstObject;
     self.headerView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 168);
-    self.headerView.backgroundColor = [UIColor redColor];
     [view addSubview:self.headerView];
     self.tableView.tableHeaderView = view;
     
