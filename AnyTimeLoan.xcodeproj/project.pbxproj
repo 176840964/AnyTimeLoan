@@ -10,6 +10,10 @@
 		822BB6A320B310AF00825CB3 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 822BB6A220B310AF00825CB3 /* HomeCollectionViewCell.m */; };
 		822BB6A720B3194200825CB3 /* HomeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 822BB6A520B3194200825CB3 /* HomeCollectionReusableView.m */; };
 		822BB6A820B3194200825CB3 /* HomeCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822BB6A620B3194200825CB3 /* HomeCollectionReusableView.xib */; };
+		822D055420E27C4600F4C253 /* UIViewController+NetError.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D055320E27C4600F4C253 /* UIViewController+NetError.m */; };
+		822D055720E27F0300F4C253 /* NetErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D055620E27F0300F4C253 /* NetErrorViewController.m */; };
+		822D055B20E28DC800F4C253 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D055A20E28DC800F4C253 /* LoginViewController.m */; };
+		822D055E20E2908E00F4C253 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D055D20E2908E00F4C253 /* UserInfoManager.m */; };
 		8237B4EA20D9218500F27A5A /* CommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8237B4E920D9218500F27A5A /* CommonModel.m */; };
 		8237B4ED20D92E0E00F27A5A /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8237B4EC20D92E0E00F27A5A /* CommonWebViewController.m */; };
 		8237B4F020DA8E2C00F27A5A /* UIView+BaseFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8237B4EF20DA8E2C00F27A5A /* UIView+BaseFrameInfo.m */; };
@@ -44,6 +48,14 @@
 		822BB6A420B3194200825CB3 /* HomeCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionReusableView.h; sourceTree = "<group>"; };
 		822BB6A520B3194200825CB3 /* HomeCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionReusableView.m; sourceTree = "<group>"; };
 		822BB6A620B3194200825CB3 /* HomeCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionReusableView.xib; sourceTree = "<group>"; };
+		822D055220E27C4600F4C253 /* UIViewController+NetError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NetError.h"; sourceTree = "<group>"; };
+		822D055320E27C4600F4C253 /* UIViewController+NetError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NetError.m"; sourceTree = "<group>"; };
+		822D055520E27F0300F4C253 /* NetErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetErrorViewController.h; sourceTree = "<group>"; };
+		822D055620E27F0300F4C253 /* NetErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetErrorViewController.m; sourceTree = "<group>"; };
+		822D055920E28DC800F4C253 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		822D055A20E28DC800F4C253 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		822D055C20E2908E00F4C253 /* UserInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
+		822D055D20E2908E00F4C253 /* UserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		8237B4E820D9218500F27A5A /* CommonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonModel.h; sourceTree = "<group>"; };
 		8237B4E920D9218500F27A5A /* CommonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonModel.m; sourceTree = "<group>"; };
 		8237B4EB20D92E0E00F27A5A /* CommonWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonWebViewController.h; sourceTree = "<group>"; };
@@ -121,6 +133,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		822D055820E28DA800F4C253 /* 4.Login */ = {
+			isa = PBXGroup;
+			children = (
+				822D055920E28DC800F4C253 /* LoginViewController.h */,
+				822D055A20E28DC800F4C253 /* LoginViewController.m */,
+				822D055C20E2908E00F4C253 /* UserInfoManager.h */,
+				822D055D20E2908E00F4C253 /* UserInfoManager.m */,
+			);
+			path = 4.Login;
+			sourceTree = "<group>";
+		};
 		8237B4E720D9215000F27A5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +196,7 @@
 				82CF00651FD59A6300A0FF90 /* 1.Juvenile */,
 				82F0D937207CFFBB002B85AE /* 2.Adult */,
 				82CF00661FD59A8300A0FF90 /* 3.Mine */,
+				822D055820E28DA800F4C253 /* 4.Login */,
 				82CF00601FD595D700A0FF90 /* Category */,
 				82CF005B1FD5950D00A0FF90 /* Base */,
 				82F0D941207D069C002B85AE /* Common */,
@@ -205,6 +229,8 @@
 				82CF005E1FD5954700A0FF90 /* BaseNavigationController.m */,
 				82CF00671FD59AC300A0FF90 /* BaseViewController.h */,
 				82CF00681FD59AC300A0FF90 /* BaseViewController.m */,
+				822D055520E27F0300F4C253 /* NetErrorViewController.h */,
+				822D055620E27F0300F4C253 /* NetErrorViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +242,8 @@
 				82CF00621FD5960100A0FF90 /* UIImage+Color.m */,
 				8237B4EE20DA8E2C00F27A5A /* UIView+BaseFrameInfo.h */,
 				8237B4EF20DA8E2C00F27A5A /* UIView+BaseFrameInfo.m */,
+				822D055220E27C4600F4C253 /* UIViewController+NetError.h */,
+				822D055320E27C4600F4C253 /* UIViewController+NetError.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -301,8 +329,7 @@
 				82CF003E1FD5919500A0FF90 /* Sources */,
 				82CF003F1FD5919500A0FF90 /* Frameworks */,
 				82CF00401FD5919500A0FF90 /* Resources */,
-				4BF4E26069BF7E1170700322 /* [CP] Embed Pods Frameworks */,
-				213ED89D51EB028BD27FF259 /* [CP] Copy Pods Resources */,
+				ED96A52CC7456565E9838A5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,21 +391,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		213ED89D51EB028BD27FF259 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnyTimeLoan/Pods-AnyTimeLoan-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2F7123BB6EAE0CBCB1BF59B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,19 +409,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4BF4E26069BF7E1170700322 /* [CP] Embed Pods Frameworks */ = {
+		ED96A52CC7456565E9838A5B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AnyTimeLoan/Pods-AnyTimeLoan-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnyTimeLoan/Pods-AnyTimeLoan-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnyTimeLoan/Pods-AnyTimeLoan-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -420,12 +435,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				82B32CC420B306680060EF0D /* ContactUsViewController.m in Sources */,
+				822D055B20E28DC800F4C253 /* LoginViewController.m in Sources */,
 				82CF005F1FD5954700A0FF90 /* BaseNavigationController.m in Sources */,
 				822BB6A320B310AF00825CB3 /* HomeCollectionViewCell.m in Sources */,
 				82B32CC120B306530060EF0D /* MineInfoViewController.m in Sources */,
 				82F0D93A207D01B3002B85AE /* AdultViewController.m in Sources */,
+				822D055720E27F0300F4C253 /* NetErrorViewController.m in Sources */,
 				8237B4ED20D92E0E00F27A5A /* CommonWebViewController.m in Sources */,
 				82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */,
+				822D055420E27C4600F4C253 /* UIViewController+NetError.m in Sources */,
+				822D055E20E2908E00F4C253 /* UserInfoManager.m in Sources */,
 				8237B4F020DA8E2C00F27A5A /* UIView+BaseFrameInfo.m in Sources */,
 				82F0D94E207D0A84002B85AE /* CommonTableViewCell.m in Sources */,
 				8237B4EA20D9218500F27A5A /* CommonModel.m in Sources */,

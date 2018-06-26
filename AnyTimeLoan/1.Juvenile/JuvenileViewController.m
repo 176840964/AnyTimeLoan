@@ -29,6 +29,21 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"CommonTableViewCell" bundle:nil] forCellReuseIdentifier:@"CommonTableViewCell"];
     self.tableView.rowHeight = 150;
     
+    __weak typeof(self) weakSelf = self;
+    self.tapNetErrorBtnHandler = ^{
+        [weakSelf requestNetwork];
+    };
+    
+    self.refreshCtrlHandler = ^{
+        weakSelf.pageIndex = 1;
+        [weakSelf requestNetwork];
+    };
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        weakSelf.pageIndex ++;
+        [weakSelf requestNetwork];
+    }];
+    
     self.dataArr = [NSMutableArray new];
     [self requestNetwork];
 }
@@ -39,22 +54,38 @@
 }
 
 - (void)requestNetwork {
-    [[AFHTTPSessionManager manager] POST:CommonUrl parameters:@{@"category_id":@"2", @"page":@(1)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[AFHTTPSessionManager manager] POST:CommonUrl parameters:@{@"category_id":@"2", @"page":@(self.pageIndex)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.refreshControl endRefreshing];
+        
         NSDictionary *dataDic = responseObject;
         NSNumber *code = [dataDic objectForKey:@"code"];
         NSString *msg = [dataDic objectForKey:@"msg"];
         if (code.integerValue == 1) {
-            NSArray *list = [[dataDic objectForKey:@"data"] objectForKey:@"list"];
-            for (NSDictionary *dic in list) {
-                CommonModel * model = [CommonModel createCommonModelByDic:dic];
-                [self.dataArr addObject:model];
+            self.tableView.hidden = NO;
+            self.netErrorBtn.hidden = YES;
+            
+            if (1 == self.pageIndex) {
+                [self.dataArr removeAllObjects];
+                [self.tableView.mj_footer endRefreshing];
             }
-            [self.tableView reloadData];
+            
+            NSArray *list = [[dataDic objectForKey:@"data"] objectForKey:@"list"];
+            if (0 == list.count) {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            } else {
+                for (NSDictionary *dic in list) {
+                    CommonModel * model = [CommonModel createCommonModelByDic:dic];
+                    [self.dataArr addObject:model];
+                }
+                [self.tableView reloadData];
+                [self.tableView.mj_footer endRefreshing];
+            }
         } else {
             NSLog(@"%@", msg);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        self.tableView.hidden = YES;
+        self.netErrorBtn.hidden = NO;
     }];
 }
 
@@ -66,6 +97,12 @@
         CommonWebViewController *vc = segue.destinationViewController;
         vc.title = model.post_title;
         vc.urlStr = model.post_source;
+    } else if ([segue.identifier isEqualToString:@"presentLoginViewController"]) {
+        BaseNavigationController *naviVC = segue.destinationViewController;
+        LoginViewController *loginVC = naviVC.viewControllers.firstObject;
+        loginVC.tapLoginBtnHandler = ^{
+            [self performSegueWithIdentifier:@"showCommonWebViewController" sender:self];
+        };
     }
 }
 
@@ -94,6 +131,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.selectedIndex = indexPath.row;
-    [self performSegueWithIdentifier:@"showCommonWebViewController" sender:self];
+    if ([UserInfoManager shareInstance].isLogin) {
+        [self performSegueWithIdentifier:@"showCommonWebViewController" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"presentLoginViewController" sender:self];
+    }
 }
 @end

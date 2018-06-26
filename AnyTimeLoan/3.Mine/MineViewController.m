@@ -21,6 +21,13 @@
     self.dataArr = @[@"个人资料", @"关于我们"];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (![UserInfoManager shareInstance].isLogin) {
+        [self performSegueWithIdentifier:@"presentLoginViewController" sender:self];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -29,6 +36,12 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"presentLoginViewController"]) {
+        BaseNavigationController *naviVC = segue.destinationViewController;
+        LoginViewController *loginVC = naviVC.viewControllers.firstObject;
+        loginVC.tapCanclHandler = ^{
+        };
+    }
 }
 
 #pragma mark - UITableViewDataSource

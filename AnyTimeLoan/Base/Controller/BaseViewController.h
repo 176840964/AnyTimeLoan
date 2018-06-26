@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : NetErrorViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (copy, nonatomic) dispatch_block_t refreshCtrlHandler;
+@property (assign, nonatomic) NSInteger pageIndex;
 
 @end
