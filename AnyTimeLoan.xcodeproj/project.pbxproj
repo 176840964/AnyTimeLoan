@@ -10,7 +10,6 @@
 		822BB6A320B310AF00825CB3 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 822BB6A220B310AF00825CB3 /* HomeCollectionViewCell.m */; };
 		822BB6A720B3194200825CB3 /* HomeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 822BB6A520B3194200825CB3 /* HomeCollectionReusableView.m */; };
 		822BB6A820B3194200825CB3 /* HomeCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822BB6A620B3194200825CB3 /* HomeCollectionReusableView.xib */; };
-		822D055420E27C4600F4C253 /* UIViewController+NetError.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D055320E27C4600F4C253 /* UIViewController+NetError.m */; };
 		822D055720E27F0300F4C253 /* NetErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D055620E27F0300F4C253 /* NetErrorViewController.m */; };
 		822D055B20E28DC800F4C253 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D055A20E28DC800F4C253 /* LoginViewController.m */; };
 		822D055E20E2908E00F4C253 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 822D055D20E2908E00F4C253 /* UserInfoManager.m */; };
@@ -48,8 +47,6 @@
 		822BB6A420B3194200825CB3 /* HomeCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionReusableView.h; sourceTree = "<group>"; };
 		822BB6A520B3194200825CB3 /* HomeCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionReusableView.m; sourceTree = "<group>"; };
 		822BB6A620B3194200825CB3 /* HomeCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionReusableView.xib; sourceTree = "<group>"; };
-		822D055220E27C4600F4C253 /* UIViewController+NetError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NetError.h"; sourceTree = "<group>"; };
-		822D055320E27C4600F4C253 /* UIViewController+NetError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NetError.m"; sourceTree = "<group>"; };
 		822D055520E27F0300F4C253 /* NetErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetErrorViewController.h; sourceTree = "<group>"; };
 		822D055620E27F0300F4C253 /* NetErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetErrorViewController.m; sourceTree = "<group>"; };
 		822D055920E28DC800F4C253 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -242,8 +239,6 @@
 				82CF00621FD5960100A0FF90 /* UIImage+Color.m */,
 				8237B4EE20DA8E2C00F27A5A /* UIView+BaseFrameInfo.h */,
 				8237B4EF20DA8E2C00F27A5A /* UIView+BaseFrameInfo.m */,
-				822D055220E27C4600F4C253 /* UIViewController+NetError.h */,
-				822D055320E27C4600F4C253 /* UIViewController+NetError.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -443,7 +438,6 @@
 				822D055720E27F0300F4C253 /* NetErrorViewController.m in Sources */,
 				8237B4ED20D92E0E00F27A5A /* CommonWebViewController.m in Sources */,
 				82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */,
-				822D055420E27C4600F4C253 /* UIViewController+NetError.m in Sources */,
 				822D055E20E2908E00F4C253 /* UserInfoManager.m in Sources */,
 				8237B4F020DA8E2C00F27A5A /* UIView+BaseFrameInfo.m in Sources */,
 				82F0D94E207D0A84002B85AE /* CommonTableViewCell.m in Sources */,
