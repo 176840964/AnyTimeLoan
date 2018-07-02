@@ -15,8 +15,10 @@
 #import "CommonHeaderView.h"
 #import "CommonTableViewCell.h"
 #import "CommonModel.h"
+#import "BannerModel.h"
 #import "AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
+#import "UIButton+AFNetworking.h"
 #import "UIView+BaseFrameInfo.h"
 #import "CommonWebViewController.h"
 #import "NetErrorViewController.h"
@@ -26,6 +28,7 @@
 #import "BaseNavigationController.h"
 
 #define CommonUrl @"http://api.app.xuebatuijian.com/api/portal/lists/getCategoryPostLists"
+#define BannerUrl @"http://api.app.xuebatuijian.com/api/home/slides/"
 
 #define CommonColor [UIColor colorWithRed:243 / 255.0 green:129 / 255.0 blue:50 / 255.0 alpha:1.0]
 #define ColorWithRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0  blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]

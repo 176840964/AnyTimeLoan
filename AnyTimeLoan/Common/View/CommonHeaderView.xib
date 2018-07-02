@@ -15,12 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="357" height="98"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-9f-C5Y">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-9f-C5Y">
                     <rect key="frame" x="0.0" y="0.0" width="357" height="98"/>
                 </scrollView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannerDefult" translatesAutoresizingMaskIntoConstraints="NO" id="uP1-O1-A65">
-                    <rect key="frame" x="0.0" y="0.0" width="357" height="98"/>
-                </imageView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4ev-k5-d4T">
                     <rect key="frame" x="0.0" y="61" width="357" height="37"/>
                     <constraints>
@@ -31,16 +28,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="wTi-9f-C5Y" secondAttribute="trailing" id="2JH-B2-vXP"/>
-                <constraint firstItem="uP1-O1-A65" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2lI-1Z-2pb"/>
-                <constraint firstAttribute="trailing" secondItem="uP1-O1-A65" secondAttribute="trailing" id="3AS-zf-KEK"/>
                 <constraint firstItem="4ev-k5-d4T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8xC-Nx-jsk"/>
                 <constraint firstItem="wTi-9f-C5Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BhA-je-AVc"/>
                 <constraint firstAttribute="bottom" secondItem="wTi-9f-C5Y" secondAttribute="bottom" id="MXR-86-tAe"/>
-                <constraint firstAttribute="bottom" secondItem="uP1-O1-A65" secondAttribute="bottom" id="XZP-fw-pat"/>
                 <constraint firstAttribute="trailing" secondItem="4ev-k5-d4T" secondAttribute="trailing" id="aiy-lW-kBN"/>
                 <constraint firstAttribute="bottom" secondItem="4ev-k5-d4T" secondAttribute="bottom" id="bDp-9G-Tqd"/>
                 <constraint firstItem="wTi-9f-C5Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fTG-yL-008"/>
-                <constraint firstItem="uP1-O1-A65" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oTI-49-uco"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -50,7 +43,4 @@
             <point key="canvasLocation" x="15.5" y="-233"/>
         </view>
     </objects>
-    <resources>
-        <image name="bannerDefult" width="375" height="167"/>
-    </resources>
 </document>

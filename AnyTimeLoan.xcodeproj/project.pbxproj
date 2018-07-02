@@ -18,6 +18,7 @@
 		8237B4F020DA8E2C00F27A5A /* UIView+BaseFrameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8237B4EF20DA8E2C00F27A5A /* UIView+BaseFrameInfo.m */; };
 		826D3F3E1FDBB6C400DBE37C /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 826D3F3D1FDBB6C400DBE37C /* MineHeaderView.m */; };
 		826D3F401FDBB6D200DBE37C /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 826D3F3F1FDBB6D200DBE37C /* MineHeaderView.xib */; };
+		828DFF0520EA4D9C00F03F09 /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 828DFF0420EA4D9C00F03F09 /* BannerModel.m */; };
 		82B32CC120B306530060EF0D /* MineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B32CC020B306530060EF0D /* MineInfoViewController.m */; };
 		82B32CC420B306680060EF0D /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B32CC320B306680060EF0D /* ContactUsViewController.m */; };
 		82CF00471FD5919500A0FF90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF00461FD5919500A0FF90 /* AppDelegate.m */; };
@@ -63,6 +64,8 @@
 		826D3F3C1FDBB6C400DBE37C /* MineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
 		826D3F3D1FDBB6C400DBE37C /* MineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
 		826D3F3F1FDBB6D200DBE37C /* MineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
+		828DFF0320EA4D9C00F03F09 /* BannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
+		828DFF0420EA4D9C00F03F09 /* BannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
 		82B32CBF20B306530060EF0D /* MineInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInfoViewController.h; sourceTree = "<group>"; };
 		82B32CC020B306530060EF0D /* MineInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInfoViewController.m; sourceTree = "<group>"; };
 		82B32CC220B306680060EF0D /* ContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 			children = (
 				8237B4E820D9218500F27A5A /* CommonModel.h */,
 				8237B4E920D9218500F27A5A /* CommonModel.m */,
+				828DFF0320EA4D9C00F03F09 /* BannerModel.h */,
+				828DFF0420EA4D9C00F03F09 /* BannerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 				82B32CC120B306530060EF0D /* MineInfoViewController.m in Sources */,
 				82F0D93A207D01B3002B85AE /* AdultViewController.m in Sources */,
 				822D055720E27F0300F4C253 /* NetErrorViewController.m in Sources */,
+				828DFF0520EA4D9C00F03F09 /* BannerModel.m in Sources */,
 				8237B4ED20D92E0E00F27A5A /* CommonWebViewController.m in Sources */,
 				82CF00691FD59AC300A0FF90 /* BaseViewController.m in Sources */,
 				822D055E20E2908E00F4C253 /* UserInfoManager.m in Sources */,

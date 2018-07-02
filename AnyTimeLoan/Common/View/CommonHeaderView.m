@@ -23,4 +23,32 @@
 }
 */
 
+- (void)layoutCommonSubviewsByBannerModelArr:(NSArray *)arr {
+    self.pageCtrl.numberOfPages = arr.count;
+    
+    for (NSInteger index = 0; index < arr.count; index++) {
+        BannerModel *model = [arr objectAtIndex:index];
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.tag = index;
+        btn.frame = CGRectMake(index * self.width, 0, self.width, self.height);
+        [btn setImageForState:UIControlStateNormal withURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"bannerDefult"]];
+        [btn addTarget:self action:@selector(onTapBanner:) forControlEvents:UIControlEventTouchUpInside];
+        [self.scrollView addSubview:btn];
+    }
+    
+    [self.scrollView setContentSize:CGSizeMake(self.width *arr.count, self.height)];
+}
+
+- (void)removeAllBannerViews {
+    
+}
+
+#pragma mark -
+- (void)onTapBanner:(UIButton *)btn {
+    if (self.tapBannerHandler) {
+        self.tapBannerHandler(btn.tag);
+    }
+}
+
 @end

@@ -10,4 +10,7 @@
 
 @interface CommonHeaderView : UIView
 
+@property (copy, nonatomic) void (^tapBannerHandler)(NSInteger);
+- (void)layoutCommonSubviewsByBannerModelArr:(NSArray *)arr;
+
 @end

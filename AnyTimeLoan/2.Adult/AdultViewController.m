@@ -11,7 +11,9 @@
 @interface AdultViewController ()
 @property (strong, nonatomic) CommonHeaderView *headerView;
 @property (strong, nonatomic) NSMutableArray *dataArr;
+@property (strong, nonatomic) NSMutableArray *bannerArr;
 @property (assign, nonatomic) NSInteger selectedIndex;
+@property (assign, nonatomic) BOOL isBannerAction;
 @end
 
 @implementation AdultViewController
@@ -30,6 +32,16 @@
     self.tableView.rowHeight = 150;
     
     __weak typeof(self) weakSelf = self;
+    self.headerView.tapBannerHandler = ^(NSInteger index) {
+        if ([UserInfoManager shareInstance].isLogin) {
+            weakSelf.selectedIndex = index;
+            weakSelf.isBannerAction = YES;
+            [weakSelf performSegueWithIdentifier:@"showCommonWebViewController" sender:weakSelf];
+        } else {
+            [weakSelf performSegueWithIdentifier:@"presentLoginViewController" sender:weakSelf];
+        }
+    };
+    
     self.tapNetErrorBtnHandler = ^{
         [weakSelf requestNetwork];
     };
@@ -46,6 +58,9 @@
     
     self.dataArr = [NSMutableArray new];
     [self requestNetwork];
+    
+    self.bannerArr = [NSMutableArray new];
+    [self requestBannerNetwork];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +68,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - network
 - (void)requestNetwork {
     [[AFHTTPSessionManager manager] POST:CommonUrl parameters:@{@"category_id":@"3", @"page":@(self.pageIndex)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.refreshControl endRefreshing];
@@ -89,13 +105,42 @@
     }];
 }
 
+- (void)requestBannerNetwork {
+    
+    NSString *path = [NSString stringWithFormat:@"%@%@", BannerUrl, @"4"];
+    [[AFHTTPSessionManager manager] GET:path parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = responseObject;
+        NSNumber *code = [dic objectForKey:@"code"];
+        if (1 == code.integerValue) {
+            NSArray *data = [dic objectForKey:@"data"];
+            if (1 <= data.count) {
+                NSArray *items = [data.firstObject objectForKey:@"items"];
+                for (NSDictionary *infoDic in items) {
+                    BannerModel *model = [BannerModel createBannerModelByDic:infoDic];
+                    [self.bannerArr addObject:model];
+                }
+                
+                [self.headerView layoutCommonSubviewsByBannerModelArr:self.bannerArr];
+            }
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showCommonWebViewController"]) {
-        CommonModel *model = [self.dataArr objectAtIndex:self.selectedIndex];
         CommonWebViewController *vc = segue.destinationViewController;
-        vc.title = model.post_title;
-        vc.urlStr = model.post_source;
+        if (self.isBannerAction) {
+            BannerModel *model = [self.bannerArr objectAtIndex:self.selectedIndex];
+            vc.title = model.title;
+            vc.urlStr = model.url;
+        } else {
+            CommonModel *model = [self.dataArr objectAtIndex:self.selectedIndex];
+            vc.title = model.post_title;
+            vc.urlStr = model.post_source;
+        }
     } else if ([segue.identifier isEqualToString:@"presentLoginViewController"]) {
         BaseNavigationController *naviVC = segue.destinationViewController;
         LoginViewController *loginVC = naviVC.viewControllers.firstObject;
