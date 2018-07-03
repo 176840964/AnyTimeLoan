@@ -51,6 +51,7 @@
     
     self.tapNetErrorBtnHandler = ^{
         [weakSelf requestNetwork];
+        [weakSelf requestBannerNetwork];
     };
     
     self.dataArr = [NSMutableArray new];
@@ -58,6 +59,16 @@
     
     self.bannerArr = [NSMutableArray new];
     [self requestBannerNetwork];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.headerView startScrollBanner];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.headerView stopScrollBanner];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +80,7 @@
 - (void)refreshStateChange:(UIRefreshControl*)refreshCtrl {
     self.pageIndex = 1;
     [self requestNetwork];
+    [self requestBannerNetwork];
 }
 
 #pragma mark - network
@@ -101,6 +113,8 @@
 }
 
 - (void)requestBannerNetwork {
+    [self.bannerArr removeAllObjects];
+    
     NSString *path = [NSString stringWithFormat:@"%@%@", BannerUrl, @"2"];
     [[AFHTTPSessionManager manager] GET:path parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;
@@ -113,7 +127,6 @@
                     BannerModel *model = [BannerModel createBannerModelByDic:infoDic];
                     [self.bannerArr addObject:model];
                 }
-                
                 [self.headerView layoutCommonSubviewsByBannerModelArr:self.bannerArr];
             }
         }

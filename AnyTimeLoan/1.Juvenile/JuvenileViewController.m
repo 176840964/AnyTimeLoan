@@ -44,11 +44,13 @@
     
     self.tapNetErrorBtnHandler = ^{
         [weakSelf requestNetwork];
+        [weakSelf requestBannerNetwork];
     };
     
     self.refreshCtrlHandler = ^{
         weakSelf.pageIndex = 1;
         [weakSelf requestNetwork];
+        [weakSelf requestBannerNetwork];
     };
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
@@ -61,6 +63,17 @@
     
     self.bannerArr = [NSMutableArray new];
     [self requestBannerNetwork];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.headerView startScrollBanner];
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.headerView stopScrollBanner];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -106,6 +119,7 @@
 }
 
 - (void)requestBannerNetwork {
+    [self.bannerArr removeAllObjects];
     NSString *path = [NSString stringWithFormat:@"%@%@", BannerUrl, @"3"];
     [[AFHTTPSessionManager manager] GET:path parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;

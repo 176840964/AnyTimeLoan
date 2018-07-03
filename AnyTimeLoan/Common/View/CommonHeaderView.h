@@ -13,4 +13,7 @@
 @property (copy, nonatomic) void (^tapBannerHandler)(NSInteger);
 - (void)layoutCommonSubviewsByBannerModelArr:(NSArray *)arr;
 
+- (void)startScrollBanner;
+- (void)stopScrollBanner;
+
 @end

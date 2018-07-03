@@ -17,8 +17,11 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-9f-C5Y">
                     <rect key="frame" x="0.0" y="0.0" width="357" height="98"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="hRv-Zj-S5a"/>
+                    </connections>
                 </scrollView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4ev-k5-d4T">
+                <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4ev-k5-d4T">
                     <rect key="frame" x="0.0" y="61" width="357" height="37"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="37" id="8LK-Kf-Kda"/>
