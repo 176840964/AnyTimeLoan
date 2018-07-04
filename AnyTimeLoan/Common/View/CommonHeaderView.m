@@ -35,7 +35,7 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
         btn.frame = CGRectMake(index * self.width, 0, self.width, self.height);
-        [btn setImageForState:UIControlStateNormal withURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"bannerDefult"]];
+        [btn setBackgroundImageForState:UIControlStateNormal withURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"bannerDefult"]];
         [btn addTarget:self action:@selector(onTapBanner:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollView addSubview:btn];
     }
