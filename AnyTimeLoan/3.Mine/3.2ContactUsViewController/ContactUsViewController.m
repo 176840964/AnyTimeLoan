@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"关于我们";
-    self.dataArr = @[@[@"业务合作微信", @"zhangrx5566"], @[@"邮箱", @"133****2324"]];
+    self.dataArr = @[@[@"业务合作微信", @"zhangrx5566"], @[@"邮箱", @"83343976@qq.com"]];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MineDetailCell" bundle:nil] forCellReuseIdentifier:@"MineDetailCell"];
 }
