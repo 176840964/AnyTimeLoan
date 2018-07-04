@@ -10,6 +10,8 @@
 
 @interface UserInfoManager : NSObject
 @property (assign, nonatomic) BOOL isLogin;
+@property (copy, nonatomic) NSString *userToken;
+@property (copy, nonatomic) NSString *userMobile;
 
 + (instancetype)shareInstance;
 

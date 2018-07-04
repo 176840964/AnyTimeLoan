@@ -7,6 +7,7 @@
 //
 
 #import "MineInfoViewController.h"
+#import "MineDetailCell.h"
 
 @interface MineInfoViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSArray *dataArr;
@@ -18,7 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"个人资料";
-    self.dataArr = @[@"头像", @"昵称", @"登录手机号"];
+    self.dataArr = @[@"昵称", @"手机号"];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"MineDetailCell" bundle:nil] forCellReuseIdentifier:@"MineDetailCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,11 +45,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MineInfoCell"];
+    MineDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MineDetailCell"];
     
     NSString *titleStr = [self.dataArr objectAtIndex:indexPath.row];
-    cell.textLabel.text = titleStr;
-    cell.textLabel.textColor = [UIColor colorWithRed:125 / 255.0 green:128 / 255.0 blue:129 / 255.0 alpha:1.0];
+    cell.mainLab.text = titleStr;
+    
+    NSString *userMoblieStr = [UserInfoManager shareInstance].userMobile;
+    cell.subLab.text = userMoblieStr;
+    
     return cell;
 }
 

@@ -24,7 +24,17 @@
 {
     self = [super init];
     if (self) {
-        self.isLogin = NO;
+        NSString *mobileStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"Mobile"];
+        NSString *headStr = [mobileStr substringWithRange:NSMakeRange(0, 3)];
+        NSString *footStr = [mobileStr substringWithRange:NSMakeRange(7, 4)];
+        self.userMobile = [NSString stringWithFormat:@"%@****%@", headStr, footStr];
+        
+        self.userToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserToken"];
+        if (self.userToken && 0 != self.userToken.length) {
+            self.isLogin = YES;
+        } else {
+            self.isLogin = NO;
+        }
     }
     return self;
 }

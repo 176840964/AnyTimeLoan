@@ -7,6 +7,7 @@
 //
 
 #import "ContactUsViewController.h"
+#import "MineDetailCell.h"
 
 @interface ContactUsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSArray *dataArr;
@@ -17,8 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"联系我们";
+    self.title = @"关于我们";
     self.dataArr = @[@[@"业务合作微信", @"zhangrx5566"], @[@"邮箱", @"133****2324"]];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"MineDetailCell" bundle:nil] forCellReuseIdentifier:@"MineDetailCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,11 +44,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactUsCell"];
+    MineDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MineDetailCell"];
     NSArray *arr = [self.dataArr objectAtIndex:indexPath.row];
-    cell.textLabel.text = [arr objectAtIndex:0];
-    cell.textLabel.textColor = [UIColor colorWithRed:125 / 255.0 green:128 / 255.0 blue:129 / 255.0 alpha:1.0];
-    cell.detailTextLabel.text = [arr objectAtIndex:1];
+    cell.mainLab.text = [arr objectAtIndex:0];
+    cell.subLab.text = [arr objectAtIndex:1];
     return cell;
 }
 
