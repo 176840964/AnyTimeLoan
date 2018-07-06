@@ -8,7 +8,7 @@
 	<string>development</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>test</key>
+		<key>com.xuebatuijian.zxl</key>
 		<string>development</string>
 	</dict>
 	<key>signingCertificate</key>

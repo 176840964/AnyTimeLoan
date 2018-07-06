@@ -609,9 +609,9 @@
 				INFOPLIST_FILE = AnyTimeLoan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xuebatuijian.zxl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2ac63087-f7dc-4a1f-a38a-dbde012f7aaf";
+				PROVISIONING_PROFILE = "32f1fa2f-b1b1-4c15-8c9e-95cc5bcce39d";
 				PROVISIONING_PROFILE_SPECIFIER = development;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -629,9 +629,9 @@
 				INFOPLIST_FILE = AnyTimeLoan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xuebatuijian.zxl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2ac63087-f7dc-4a1f-a38a-dbde012f7aaf";
+				PROVISIONING_PROFILE = "32f1fa2f-b1b1-4c15-8c9e-95cc5bcce39d";
 				PROVISIONING_PROFILE_SPECIFIER = development;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
