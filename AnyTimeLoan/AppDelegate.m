@@ -16,7 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     
     [UITabBar appearance].tintColor = CommonColor;
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
